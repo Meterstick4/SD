@@ -19,13 +19,29 @@ public class WorldSwitcher : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 		switchTimes = 0;
 		//orgLocat = player.transform.position;
-		toSwitchLocOneTime = new Vector3 (-360, 4, 1281);
+		toSwitchLocOneTime = new Vector3 (-0, 0, 0);
 		tempLocat = new Vector3 (0, 2, 0);
 		DontDestroyOnLoad (player);
 		miniMapOpen = false;
 
 
 	}
+
+    public int getToSwitch()
+    {
+        return toSwtich;
+    }
+
+    public void nextToStages()
+    {
+        toSwtich += 2;
+    }
+
+    public void setLocat()
+    {
+        orgLocat = new Vector3(0, 0, 0);
+        tempLocat = new Vector3(0, 0, 0);
+    }
 
 	
 	// Update is called once per frame

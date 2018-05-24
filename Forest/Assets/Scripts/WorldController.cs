@@ -32,7 +32,7 @@ public class WorldController : MonoBehaviour
 				Destroy (audios [1]);
 			}
 		}
-		else if(SceneManager.GetActiveScene().buildIndex == 1)
+		else if(SceneManager.GetActiveScene().buildIndex != 0)
 		{
 			audios = GameObject.FindGameObjectsWithTag ("Audio");
 			objects = GameObject.FindGameObjectsWithTag("Player");
